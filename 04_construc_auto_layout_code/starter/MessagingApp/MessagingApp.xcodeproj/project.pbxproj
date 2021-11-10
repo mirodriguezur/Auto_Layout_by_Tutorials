@@ -15,9 +15,7 @@
 		FD37A82D2234D0C000387AB6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A8282234D0C000387AB6 /* ProfileViewController.swift */; };
 		FD37A82E2234D0C000387AB6 /* ProfileNameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A82A2234D0C000387AB6 /* ProfileNameLabel.swift */; };
 		FD37A8302234D0C000387AB6 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A82C2234D0C000387AB6 /* ProfileImageView.swift */; };
-		FD37FF4F2293153900701927 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD37FF4E2293153900701927 /* TabBar.storyboard */; };
 		FD37FF522293154500701927 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD37FF512293154500701927 /* Contacts.storyboard */; };
-		FD37FF552293155C00701927 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD37FF542293155C00701927 /* Profile.storyboard */; };
 		FD37FF5A2293158800701927 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37FF572293158800701927 /* ContactTableViewCell.swift */; };
 		FD37FF5B2293158800701927 /* ContactPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37FF582293158800701927 /* ContactPreviewView.xib */; };
 		FD37FF5C2293158800701927 /* ContactPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37FF592293158800701927 /* ContactPreviewView.swift */; };
@@ -37,9 +35,7 @@
 		FD37A8282234D0C000387AB6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FD37A82A2234D0C000387AB6 /* ProfileNameLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileNameLabel.swift; sourceTree = "<group>"; };
 		FD37A82C2234D0C000387AB6 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
-		FD37FF4E2293153900701927 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		FD37FF512293154500701927 /* Contacts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
-		FD37FF542293155C00701927 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		FD37FF572293158800701927 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		FD37FF582293158800701927 /* ContactPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactPreviewView.xib; sourceTree = "<group>"; };
 		FD37FF592293158800701927 /* ContactPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactPreviewView.swift; sourceTree = "<group>"; };
@@ -136,7 +132,6 @@
 		FD37FF4D2293153900701927 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				FD37FF4E2293153900701927 /* TabBar.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -152,7 +147,6 @@
 		FD37FF532293155C00701927 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				FD37FF542293155C00701927 /* Profile.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -300,8 +294,6 @@
 				FD37FF5B2293158800701927 /* ContactPreviewView.xib in Resources */,
 				5394F02521864DF5006E754C /* LaunchScreen.storyboard in Resources */,
 				FD37FF522293154500701927 /* Contacts.storyboard in Resources */,
-				FD37FF552293155C00701927 /* Profile.storyboard in Resources */,
-				FD37FF4F2293153900701927 /* TabBar.storyboard in Resources */,
 				D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

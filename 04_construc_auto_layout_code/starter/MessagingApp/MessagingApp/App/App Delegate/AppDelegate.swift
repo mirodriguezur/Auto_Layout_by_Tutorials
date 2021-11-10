@@ -33,16 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    // 1  Inicializo storyboard
-    let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-    // 2 Creo una referencia al controlador de vista
-    let viewController =
-      storyboard.instantiateInitialViewController()
-    // 3 configuro los delegados usando tamaño de la pantalla como marco
+    let viewController = TabBarController() //Inicializa TabBarController
     window = UIWindow(frame: UIScreen.main.bounds)
-    // 4 configuro el controlador de vista raiz de la ventana en el controlador de vista inicial del storyboard
     window?.rootViewController = viewController
-    // 5 window se muestra y se coloca frente a todas las ventanas de la aplicacion
     window?.makeKeyAndVisible()
     return true
 
