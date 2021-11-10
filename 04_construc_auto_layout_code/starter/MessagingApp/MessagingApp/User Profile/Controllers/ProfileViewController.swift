@@ -35,24 +35,24 @@ final class ProfileViewController: UIViewController {
   // MARK: - Life Cycles
   override func viewDidLoad() {
     super.viewDidLoad()
+    view.backgroundColor = .white
+    setupProfileHeaderView()
   }
   
   private func setupProfileHeaderView() {
-    // 1 Add profileHeaderView as a subview of the view controller’s view.
     view.addSubview(profileHeaderView)
-    // 2 Autoresizing mask is Auto Layout’s predecessor. It’s a layout system that’s a lot less comprehensive when compared to Auto Layout.
     profileHeaderView.translatesAutoresizingMaskIntoConstraints =
       false
-    // 3 Set and activate the profile header view’s leading, trailing, top and bottom anchors.
-    profileHeaderView.leadingAnchor.constraint(
-      equalTo: view.leadingAnchor).isActive = true
-    profileHeaderView.trailingAnchor.constraint(
-      equalTo: view.trailingAnchor).isActive = true
-    profileHeaderView.topAnchor.constraint(
-      equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-    profileHeaderView.bottomAnchor.constraint(
-      lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor)
-      .isActive = true
+    NSLayoutConstraint.activate(
+      [profileHeaderView.leadingAnchor.constraint(
+        equalTo: view.leadingAnchor),
+       profileHeaderView.trailingAnchor.constraint(
+        equalTo: view.trailingAnchor),
+       profileHeaderView.topAnchor.constraint(
+        equalTo: view.safeAreaLayoutGuide.topAnchor),
+       profileHeaderView.bottomAnchor.constraint(
+        lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor)])//The code was refactored
+
   }
 
 }
