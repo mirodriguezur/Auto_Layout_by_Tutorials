@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C49BD80273C1AF60082476C /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49BD7F273C1AF60082476C /* ProfileHeaderView.swift */; };
 		5394F02521864DF5006E754C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5394F02321864DF4006E754C /* LaunchScreen.storyboard */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C49BD7F273C1AF60082476C /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		5394F02421864DF4006E754C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* MessagingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				FD37A82C2234D0C000387AB6 /* ProfileImageView.swift */,
 				FD37A82A2234D0C000387AB6 /* ProfileNameLabel.swift */,
+				4C49BD7F273C1AF60082476C /* ProfileHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				FD37A82D2234D0C000387AB6 /* ProfileViewController.swift in Sources */,
 				D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */,
 				FD746EF82243A04F0082F9CF /* NewContactViewController.swift in Sources */,
+				4C49BD80273C1AF60082476C /* ProfileHeaderView.swift in Sources */,
 				FD37FF5A2293158800701927 /* ContactTableViewCell.swift in Sources */,
 				FD37A82E2234D0C000387AB6 /* ProfileNameLabel.swift in Sources */,
 				EEDDD23E2239E98A004ED45C /* Contact.swift in Sources */,

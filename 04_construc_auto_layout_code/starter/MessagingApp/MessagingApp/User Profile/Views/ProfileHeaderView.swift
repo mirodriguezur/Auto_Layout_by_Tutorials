@@ -1,4 +1,4 @@
-/// Copyright (c) 2019 Razeware LLC
+/// Copyright (c) 2021 Razeware LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -28,31 +28,14 @@
 
 import UIKit
 
-final class ProfileViewController: UIViewController {
-  
-  private let profileHeaderView = ProfileHeaderView() //clase que se creo anteriormente
-  
-  // MARK: - Life Cycles
-  override func viewDidLoad() {
-    super.viewDidLoad()
+final class ProfileHeaderView: UIView {
+  override init(frame: CGRect) {      //Anulo metodo de inicialización
+    super.init(frame: frame)          //establece color de fondo.
+    backgroundColor = .groupTableViewBackground
   }
   
-  private func setupProfileHeaderView() {
-    // 1 Add profileHeaderView as a subview of the view controller’s view.
-    view.addSubview(profileHeaderView)
-    // 2 Autoresizing mask is Auto Layout’s predecessor. It’s a layout system that’s a lot less comprehensive when compared to Auto Layout.
-    profileHeaderView.translatesAutoresizingMaskIntoConstraints =
-      false
-    // 3 Set and activate the profile header view’s leading, trailing, top and bottom anchors.
-    profileHeaderView.leadingAnchor.constraint(
-      equalTo: view.leadingAnchor).isActive = true
-    profileHeaderView.trailingAnchor.constraint(
-      equalTo: view.trailingAnchor).isActive = true
-    profileHeaderView.topAnchor.constraint(
-      equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-    profileHeaderView.bottomAnchor.constraint(
-      lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor)
-      .isActive = true
+  //cuando se crea una vista en código, init(frame:)se usa el inicializador y cuando se crea una vista a partir de un guión gráfico o .xib, init(coder:)se usa en su lugar
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
   }
-
 }
