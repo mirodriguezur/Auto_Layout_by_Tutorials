@@ -28,53 +28,68 @@
 
 import UIKit
 
-@IBDesignable final class ProfileImageView: UIImageView {
-  // MARK: - Value Types
+final class ProfileImageView: UIImageView {
+  // 1
   enum BorderShape: String {
     case circle
     case squircle
+    case none
   }
-  
-  // MARK: - Properties
-  @IBInspectable private var hasBorder: Bool = false {
+
+  let boldBorder: Bool      //determina ancho del borde
+
+  var hasBorder: Bool = false {
     didSet {
-      layer.borderWidth = hasBorder ? 10 : 0
+      guard hasBorder else { return layer.borderWidth = 0 }
+      layer.borderWidth = boldBorder ? 10 : 2
     }
   }
-  
-  @IBInspectable private var borderShape: String = "" {
-    didSet {
-      borderShapeDidSet()
-    }
-  }
-  
-  // MARK: - Initializers
+
+  // 2
+  private let borderShape: BorderShape
+
+  // 3
   init(borderShape: BorderShape, boldBorder: Bool = true) {
-    super.init(frame: CGRect.zero)
+    self.borderShape = borderShape
+    self.boldBorder = boldBorder
+    super.init(frame: CGRect.zero)        //Pasa zero al marco
+    backgroundColor = .lightGray
   }
-  
+
+  // 4 mitiga la necesidad de pasar un borderShape al primer inicializador, se establece en .none
+  convenience init() {
+    self.init(borderShape: .none)
+  }
+
+  // 5  se usa cuando crea ProfileImageView en Interface Builder. En este caso, se inicializa borderShape a none y boldBordera false.
   required init?(coder aDecoder: NSCoder) {
+    self.borderShape = .none
+    self.boldBorder = false
     super.init(coder: aDecoder)
   }
   
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    layer.masksToBounds = true
+  // 1
+  override func layoutSubviews() {
+    super.layoutSubviews()// se llama cuando el diseño basado en restricciones ha terminado su configuración.
+    setupBorderShape()
   }
-  
-  // MARK: - Setup Views
-  private func borderShapeDidSet() {
+
+  private func setupBorderShape() {   //Dentro de setupBorderShape(), borderShapedetermina el radio de la esquina.
+    hasBorder = borderShape != .none
+    // 2
     let width = bounds.size.width
     let divisor: CGFloat
     switch borderShape {
-    case BorderShape.circle.rawValue:
+    case .circle:
       divisor = 2
-    case BorderShape.squircle.rawValue:
+    case .squircle:
       divisor = 4
-    default:
+    case .none:
       divisor = width
     }
     let cornerRadius = width / divisor
     layer.cornerRadius = cornerRadius
   }
+
+
 }
